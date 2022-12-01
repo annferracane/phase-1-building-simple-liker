@@ -14,14 +14,7 @@ function handleResponse(e) {
 }
 
 function responseSuccessful(e, resp){
-  const heart = e.target;
-  if (heart.textContent === EMPTY_HEART) {
-    heart.textContent = FULL_HEART;
-    heart.classList.add('activated-heart');
-  } else if (heart.textContent === FULL_HEART) {
-    heart.textContent = EMPTY_HEART;
-    heart.classList.remove('activated-heart');
-  }
+  console.log(resp);
 }
 
 function responseFailed(e, error){
@@ -33,6 +26,7 @@ function responseFailed(e, error){
 
 function hideErrorModal() {
   errorModal.classList.add('hidden');
+  console.log('called');
 }
 
 

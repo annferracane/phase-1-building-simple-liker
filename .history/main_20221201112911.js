@@ -14,6 +14,8 @@ function handleResponse(e) {
 }
 
 function responseSuccessful(e, resp){
+  console.log(resp);
+  console.log(e.target);
   const heart = e.target;
   if (heart.textContent === EMPTY_HEART) {
     heart.textContent = FULL_HEART;

@@ -14,14 +14,17 @@ function handleResponse(e) {
 }
 
 function responseSuccessful(e, resp){
-  const heart = e.target;
-  if (heart.textContent === EMPTY_HEART) {
-    heart.textContent = FULL_HEART;
+  console.log(resp);
+  console.log(e.target);
+  const heart = e.target.textContent;
+  if (heart === EMPTY_HEART) {
+    heart = FULL_HEART;
     heart.classList.add('activated-heart');
-  } else if (heart.textContent === FULL_HEART) {
-    heart.textContent = EMPTY_HEART;
-    heart.classList.remove('activated-heart');
-  }
+  } else if (
+
+  )
+  e.target.textContent = FULL_HEART;
+  
 }
 
 function responseFailed(e, error){

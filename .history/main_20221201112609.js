@@ -14,14 +14,12 @@ function handleResponse(e) {
 }
 
 function responseSuccessful(e, resp){
-  const heart = e.target;
-  if (heart.textContent === EMPTY_HEART) {
-    heart.textContent = FULL_HEART;
-    heart.classList.add('activated-heart');
-  } else if (heart.textContent === FULL_HEART) {
-    heart.textContent = EMPTY_HEART;
-    heart.classList.remove('activated-heart');
-  }
+  console.log(resp);
+  console.log(e.target);
+  e.target.textContent
+  if ()
+  e.target.textContent = FULL_HEART;
+  e.target.classList.add('activated-heart');
 }
 
 function responseFailed(e, error){

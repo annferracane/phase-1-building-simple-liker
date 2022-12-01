@@ -14,25 +14,18 @@ function handleResponse(e) {
 }
 
 function responseSuccessful(e, resp){
-  const heart = e.target;
-  if (heart.textContent === EMPTY_HEART) {
-    heart.textContent = FULL_HEART;
-    heart.classList.add('activated-heart');
-  } else if (heart.textContent === FULL_HEART) {
-    heart.textContent = EMPTY_HEART;
-    heart.classList.remove('activated-heart');
-  }
+  console.log(resp);
 }
 
 function responseFailed(e, error){
   console.log(error);
   errorModal.classList.remove('hidden');
   document.querySelector('#modal-message').textContent = error;
-  setTimeout(() => hideErrorModal(), 3000);
+  setTimeout(() => hideErrorModal, 3000);
 }
 
 function hideErrorModal() {
-  errorModal.classList.add('hidden');
+  
 }
 
 
